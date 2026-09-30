@@ -30,7 +30,7 @@ Add this to a new Code cell and run:
 ```python
 try:
     import mlflow
-    mlflow.set_tracking_uri("file:./mlruns")
+    mlflow.set_tracking_uri("sqlite:///mlflow.db")
     mlflow.set_experiment("hotdog-upsell")
     with mlflow.start_run(run_name="Initial Loyalty Rule"):
         order = {"time_of_day": "lunch", "loyalty_member": "yes"}
